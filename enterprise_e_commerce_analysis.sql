@@ -1,10 +1,10 @@
---Q1. What are the total revenue?
+--Q1. What is the total revenue?
 select round(sum(payment_value)::numeric,2) as total_revenue from payments;
 
---Q2. What are the total orders,total customers?
+--Q2. Total orders,Total customers on platform?
 select count(distinct order_id) as total_orders,count(distinct customer_id) as total_customers from orders;
 
---Q3. What are the total sellers?
+--Q3. Total sellers on the platform?
 select count(distinct seller_id) as total_sellers from sellers;
 
 --Q4. How do monthly orders trend over time?
@@ -221,7 +221,7 @@ CROSS JOIN temp2 t2
 ORDER BY percent_total DESC;
 
 --Q23. How many orders were delivered late?
-select count(distinct order_id) from orders
+select count(distinct order_id) as orders_delivered_late from orders
 where order_delivered_customer_date>order_estimated_delivery_date;
 
 
