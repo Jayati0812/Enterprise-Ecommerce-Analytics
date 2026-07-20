@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+jupyter
+notebook
+ipykernel
+sqlalchemy
+psycopg2-binary
